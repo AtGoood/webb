@@ -11,7 +11,8 @@
         <label>Password: <input type="password" name="userPassword" /></label>
         <input type="hidden" name="form-id" value="auth-form" />
         <input type="submit" value="Auth" />
-        <a class="auth-sign-up" href="<%=home%>/register/">Sign Up</a>
+        <a class="auth-sign-up" href="<%=home%>/register">Sign Up</a>
+
     </form>
     <% if( authError != null ) { %>
     <span class="auth-error"><%= authError %></span>

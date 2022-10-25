@@ -9,16 +9,26 @@ public class User {
     private String pass;
     private String name;
     private String salt;
+    private String avatar;
 
     public User() {
 
     }
     public User( ResultSet res ) throws SQLException {
-        id    = res.getString( "id"    ) ;
-        login = res.getString( "login" ) ;
-        pass  = res.getString( "pass"  ) ;
-        name  = res.getString( "name"  ) ;
-        salt  = res.getString( "salt"  ) ;
+        id     = res.getString( "id"    ) ;
+        login  = res.getString( "login" ) ;
+        pass   = res.getString( "pass"  ) ;
+        name   = res.getString( "name"  ) ;
+        salt   = res.getString( "salt"  ) ;
+        avatar = res.getString( "avatar"  ) ;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getId() {
