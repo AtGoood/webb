@@ -1,5 +1,4 @@
-package step.learning.servlets;
-
+package step.learning;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import step.learning.dao.UserDAO;
@@ -155,8 +154,9 @@ public class RegUserServlet extends HttpServlet {
             changes.setLogin( login ) ;
         }
         changes.setId( authUser.getId() ) ;
-        changes.setName( req.getParameter( "name" ) ) ;
+        changes.setName(  req.getParameter( "name" ) ) ;
         changes.setEmail( req.getParameter( "email" ) ) ;
+        changes.setPass(  req.getParameter( "password" ) ) ;
 
         reply =
                 userDAO.updateUser( changes )

@@ -21,6 +21,6 @@ public class ConfigServlet extends ServletModule {
         serve( "/register/" ).with(step.learning.servlets.RegUserServlet.class) ;
         serve( "/image/*" ).with( DownloadServlet.class ) ;
         serve( "/profile" ).with( Profileservlet.class ) ;
-        serve( "/" ).with( HomeServlet.class ) ;
+     //   serve( "/" ).with( HomeServlet.class ) ;
     }
 }
